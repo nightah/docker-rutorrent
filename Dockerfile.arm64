@@ -1,4 +1,4 @@
-FROM linuxserver/rutorrent:amd64-latest
+FROM linuxserver/rutorrent:arm64v8-latest
 
 # set labels
 LABEL maintainer="Nightah"

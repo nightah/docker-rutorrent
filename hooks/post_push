@@ -1,0 +1,7 @@
+#!/bin/bash
+
+docker manifest push --purge nightah/rutorrent:latest
+docker manifest create nightah/rutorrent:latest nightah/rutorrent:amd64-latest nightah/rutorrent:arm32v7-latest nightah/rutorrent:arm64v8-latest
+docker manifest annotate nightah/rutorrent:latest nightah/rutorrent:arm32v7-latest --os linux --arch arm
+docker manifest annotate nightah/rutorrent:latest nightah/rutorrent:arm64v8-latest --os linux --arch arm64 --variant v8
+docker manifest push --purge nightah/rutorrent:latest
